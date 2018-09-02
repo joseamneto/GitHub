@@ -41,7 +41,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             try
             {
-                var part1 = Settings.GetSetting("DeploymentToolKit.ContentChecker.JssUrl", "http://sxatest.local/sitecore/api/layout/render/jss?item=");
+                var part1 = Settings.GetSetting("DeploymentToolKit.ContentChecker.JssUrl");
                 var part2 = url;
                 var key = GetAll().Key;
                 if (key == string.Empty)
