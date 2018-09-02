@@ -1,0 +1,43 @@
+﻿@using System.Web.Mvc.Html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DeploymentToolkit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.1.1.js"> </script>
+</head>
+<body>
+@Html.Partial("~/Views/Shared/DeploymentToolKitNavigation.cshtml")
+
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>Deployment ToolKit</h1>
+            <p>The deployment toolkit provides some features to help you on your deployment</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Maintenance Mode</h2>
+                <p>When we are going to do a deployment, we need to warn users not to connect to the system during this process. With just one click it blocks all users who are not Sitecore Administrators and with another click, unlocks!</p>
+                <p><a class="btn btn-default" href="/api/sitecore/MaintenanceMode/MaintenanceMode" role="button">View tool »</a></p>
+            </div>
+            <div class="col-md-6">
+                <h2>QA Content Checker</h2>
+                <p>With this content checker tool, you are able to take save the Content in a moment, and compare later after a change.This helps you to keep the quality of your deployment.</p>
+                <p><a class="btn btn-default" href="/api/sitecore/ContentChecker/ContentChecker" role="button">View tool »</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<hr />
+
+
+
+

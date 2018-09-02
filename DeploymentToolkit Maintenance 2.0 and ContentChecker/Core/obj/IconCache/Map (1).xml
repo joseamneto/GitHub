@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ItemIconCache>
+  <Item ItemPath="/sitecore/content" ItemIcon="/temp/IconCache/People/16x16/cubes_blue.png" />
+  <Item ItemPath="/sitecore/content/Applications" ItemIcon="/temp/IconCache/Software/16x16/application.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor" ItemIcon="/temp/IconCache/Apps/48x48/Pencil.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons" ItemIcon="/temp/IconCache/Control/16x16/menu_b.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Chunks" ItemIcon="/temp/iconcache/applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Security" ItemIcon="/temp/iconcache/applications/32x32/document.png" />
+  <Item ItemPath="/sitecore/layout" ItemIcon="/temp/IconCache/Applications/16x16/windows.png" />
+  <Item ItemPath="/sitecore/layout/Renderings" ItemIcon="/temp/IconCache/Software/16x16/elements1.png" />
+  <Item ItemPath="/sitecore/layout/Renderings/MaintenanceMode rendering" ItemIcon="/temp/iconcache/software/16x16/element.png" />
+  <Item ItemPath="/sitecore/client" ItemIcon="/temp/IconCache/Applications/16x16/question_and_answer.png" />
+  <Item ItemPath="/sitecore/client/Your Apps" ItemIcon="/temp/IconCache/Software/16x16/application.png" />
+  <Item ItemPath="/sitecore/client/Your Apps/MaintenanceMode" ItemIcon="/temp/iconcache/applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/client/Your Apps/MaintenanceMode/ListPage" ItemIcon="/temp/iconcache/applications/32x32/window_sidebar.png" />
+  <Item ItemPath="/sitecore/client/Your Apps/MaintenanceMode/ListPage/PageSettings" ItemIcon="/temp/iconcache/applications/16x16/preferences.png" />
+  <Item ItemPath="/sitecore/content/Applications/Content Editor/Ribbons/Chunks/Security/Maintenance Mode" ItemIcon="/temp/iconcache/applications/32x32/document.png" />
+  <Item ItemPath="/sitecore/layout/Renderings/Content Checker rendering" ItemIcon="/temp/iconcache/software/16x16/element.png" />
+  <Item ItemPath="/sitecore/client/Your Apps/Content Checker" ItemIcon="/temp/iconcache/applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/client/Your Apps/Content Checker/Checker" ItemIcon="/temp/iconcache/applications/32x32/window_sidebar.png" />
+  <Item ItemPath="/sitecore/client/Your Apps/Content Checker/Checker/PageSettings" ItemIcon="/temp/iconcache/applications/16x16/preferences.png" />
+  <Item ItemPath="/sitecore/layout/Layouts" ItemIcon="/temp/IconCache/Applications/16x16/windows.png" />
+  <Item ItemPath="/sitecore/layout/Layouts/Content Checker" ItemIcon="/temp/iconcache/applications/16x16/folder.png" />
+  <Item ItemPath="/sitecore/layout/Layouts/Content Checker/CheckerLayout" ItemIcon="/temp/iconcache/applications/16x16/text_rich_colored.png" />
+</ItemIconCache>
