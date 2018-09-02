@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>C:\inetpub\wwwroot\sxa.local</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\modulo</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="App_Config/Include/DeploymentToolKit/Z.DeploymenToolkit.config">
@@ -46,7 +46,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/25/2012 17:48:56</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>08/04/2014 02:33:56</publishTime>
+      <publishTime>03/24/2018 17:44:14</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/13/2012 11:19:34</publishTime>
@@ -58,10 +58,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 19:43:14</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.dll">
-      <publishTime>09/02/2018 21:44:59</publishTime>
+      <publishTime>09/02/2018 23:31:18</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.pdb">
-      <publishTime>09/02/2018 21:44:59</publishTime>
+      <publishTime>09/02/2018 23:31:18</publishTime>
     </File>
     <File Include="bin/Sitecore.Kernel.dll">
       <publishTime>05/30/2018 07:03:38</publishTime>
@@ -505,25 +505,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 13:39:28</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerList.cshtml">
-      <publishTime>06/12/2018 16:09:39</publishTime>
+      <publishTime>09/02/2018 23:29:09</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerNavigation.cshtml">
       <publishTime>02/09/2018 13:40:27</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerResultTable.cshtml">
-      <publishTime>06/12/2018 16:08:18</publishTime>
+      <publishTime>09/02/2018 21:50:48</publishTime>
     </File>
     <File Include="Views/Shared/DeploymentToolkit.cshtml">
-      <publishTime>06/12/2018 15:52:30</publishTime>
+      <publishTime>06/12/2018 22:52:30</publishTime>
     </File>
     <File Include="Views/Shared/DeploymentToolKitNavigation.cshtml">
-      <publishTime>02/09/2018 17:07:14</publishTime>
+      <publishTime>02/10/2018 00:07:14</publishTime>
     </File>
     <File Include="Views/Shared/ExperienceExplorerView.cshtml">
       <publishTime>05/11/2017 20:53:16</publishTime>
     </File>
     <File Include="Views/Shared/MaintenanceModeList.cshtml">
-      <publishTime>06/13/2018 10:04:22</publishTime>
+      <publishTime>06/13/2018 17:04:22</publishTime>
     </File>
     <File Include="Views/Shared/SitecoreJobsList.cshtml">
       <publishTime>11/10/2017 18:05:51</publishTime>
@@ -616,7 +616,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/02/2018 21:45:12</publishTime>
+      <publishTime>09/02/2018 22:21:19</publishTime>
     </File>
   </ItemGroup>
 </Project>

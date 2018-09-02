@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Sitecore.DeploymentToolKit.ContentChecker
+namespace Sitecore.DeploymentToolKit
 {
     public class DeploymentToolKitController : Controller
     {

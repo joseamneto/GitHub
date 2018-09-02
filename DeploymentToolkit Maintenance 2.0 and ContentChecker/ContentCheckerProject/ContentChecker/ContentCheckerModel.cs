@@ -54,10 +54,10 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 // h2 contains after this operation only 'very' and 'Joe'
                 hs2.ExceptWith(hs1);
 
-                string diff = Empty;
+                var diff = Empty;
                 foreach (var lst in hs2.ToList())
                 {
-                    diff += lst.ToString();
+                    diff += lst;
                 }
                 return diff;
             }
