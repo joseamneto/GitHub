@@ -69,7 +69,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             if (SecondCheckDate.HasValue)
             {
-                return SecondCheckDate.Value.ToShortDateString();
+                return SecondCheckDate.Value.ToShortDateString() + " "+ SecondCheckDate.Value.ToShortTimeString();
             }
             return "";
         }
@@ -78,7 +78,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             if (BaselineContentDate.HasValue)
             {
-                return BaselineContentDate.Value.ToShortDateString();
+                return BaselineContentDate.Value.ToShortDateString() + " " + BaselineContentDate.Value.ToShortTimeString();
             }
             return "";
         }

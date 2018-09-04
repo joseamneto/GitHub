@@ -58,10 +58,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 19:43:14</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.dll">
-      <publishTime>09/04/2018 18:44:24</publishTime>
+      <publishTime>09/04/2018 19:11:18</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.pdb">
-      <publishTime>09/04/2018 18:44:24</publishTime>
+      <publishTime>09/04/2018 19:11:18</publishTime>
     </File>
     <File Include="bin/Sitecore.Kernel.dll">
       <publishTime>05/30/2018 07:03:38</publishTime>

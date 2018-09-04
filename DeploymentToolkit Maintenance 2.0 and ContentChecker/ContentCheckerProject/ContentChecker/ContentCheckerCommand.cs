@@ -68,6 +68,10 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             var odt = DateTime.Now;
             var vw = Deserialize(Filename);
+            if (vw.DataCheckerTable == null)
+            {
+                vw.DataCheckerTable = PopulateContent();
+            }
 
             foreach (var item in vw.DataCheckerTable)
             {
@@ -95,12 +99,10 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             }
 
             Serialization(vw, Filename);
-
         }
 
         public ContentCheckerViewModel Fill()
         {
-      
             var oContentCheckerVw = GetAll();
             if ((oContentCheckerVw.DataCheckerTable == null) || !(oContentCheckerVw.DataCheckerTable.Any()))
             {
