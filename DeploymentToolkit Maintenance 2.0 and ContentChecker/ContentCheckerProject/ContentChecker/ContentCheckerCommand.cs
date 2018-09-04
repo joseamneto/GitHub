@@ -45,10 +45,10 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 var jssUrl = Settings.GetSetting("DeploymentToolKit.ContentChecker.JssUrl");
 
                 var key = Settings.GetSetting("DeploymentToolKit.ContentChecker.StandardJssKey");
-                var JssKey = "&sc_apikey=" + key;
+                var jssKey = "&sc_apikey=" + key;
                 
-                var mainDir = Settings.GetSetting("DeploymentToolKit.ContentChecker.MainDir");
-                var requestUrl =  jssUrl + mainDir + sitecoreItem + JssKey;
+                //var mainDir = Settings.GetSetting("DeploymentToolKit.ContentChecker.MainDir");
+                var requestUrl =  jssUrl + sitecoreItem + jssKey;
 
                 var request = (HttpWebRequest)WebRequest.Create(requestUrl);
 
@@ -60,7 +60,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return "error";
             }
             
         }
@@ -132,7 +132,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 foreach (var item in fullList)
                 {
                     var oItem = new ContentCheckerModel();
-                    oItem.Path = item.Paths.Path.Replace(homeItem.Paths.Path, "");
+                    oItem.Path = item.Paths.Path; //.Replace(homeItem.Paths.Path, "");
 
                     if (DoesItemHasPresentationDetails(item))
                     {
