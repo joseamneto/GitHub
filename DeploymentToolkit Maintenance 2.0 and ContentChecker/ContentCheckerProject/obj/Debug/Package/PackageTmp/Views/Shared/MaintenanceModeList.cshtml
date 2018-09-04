@@ -1,4 +1,5 @@
-﻿@inherits System.Web.Mvc.WebViewPage<Sitecore.DeploymentToolKit.MaintenanceMode.MaintenanceModeViewModel>
+﻿@using System.Web.Mvc.Html
+@inherits System.Web.Mvc.WebViewPage<Sitecore.DeploymentToolKit.MaintenanceMode.MaintenanceModeViewModel>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +22,7 @@
                     url: "/api/sitecore/",
                     type: "POST",
                     context: this,
-                    data: { scController: "SitecoreJobs", scAction: "BlockUsers" },
+                    data: { scController: "MaintenanceMode", scAction: "BlockUsers" },
 
                     success: function (data) {
 
