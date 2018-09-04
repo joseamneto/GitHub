@@ -7,6 +7,7 @@ using System.Web;
 using System.Xml.Serialization;
 using Sitecore.Configuration;
 using Sitecore.Data.Items;
+using Sitecore.Pipelines.GetPlaceholderRenderings;
 using Sitecore.Shell.Framework.Commands;
 using Sitecore.Web.UI.Sheer;
 
@@ -37,20 +38,19 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             // Do Stuff
         }
-        public string PerformGet(string url)
+        public string PerformGet(string sitecoreItem)
         {
             try
             {
-                var part1 = Settings.GetSetting("DeploymentToolKit.ContentChecker.JssUrl");
-                var part2 = url;
-                var key = GetAll().Key;
-                if (key == string.Empty)
-                {
-                    key = Settings.GetSetting("DeploymentToolKit.ContentChecker.StandardJssKey");
-                }
-                var part3 = "&sc_apikey=" + key;
+                var jssUrl = Settings.GetSetting("DeploymentToolKit.ContentChecker.JssUrl");
 
-                var request = (HttpWebRequest)WebRequest.Create(part1 + part2 + part3);
+                var key = Settings.GetSetting("DeploymentToolKit.ContentChecker.StandardJssKey");
+                var JssKey = "&sc_apikey=" + key;
+                
+                var mainDir = Settings.GetSetting("DeploymentToolKit.ContentChecker.MainDir");
+                var requestUrl =  jssUrl + mainDir + sitecoreItem + JssKey;
+
+                var request = (HttpWebRequest)WebRequest.Create(requestUrl);
 
                 var response = (HttpWebResponse)request.GetResponse();
 
@@ -58,9 +58,9 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
 
                 return responseString;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return "error";
+                return ex.Message;
             }
             
         }
@@ -82,8 +82,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             var odt = DateTime.Now;
             var vw = Deserialize(Filename);
-
-            if (!vw.DataCheckerTable.Any())
+            if (vw.DataCheckerTable ==null)
             {
                 vw.DataCheckerTable = PopulateContent();
             }
@@ -96,7 +95,22 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             }
 
             Serialization(vw, Filename);
+
         }
+
+        public ContentCheckerViewModel Fill()
+        {
+      
+            var oContentCheckerVw = GetAll();
+            if ((oContentCheckerVw.DataCheckerTable == null) || !(oContentCheckerVw.DataCheckerTable.Any()))
+            {
+                oContentCheckerVw.DataCheckerTable = PopulateContent();
+            }
+
+            return oContentCheckerVw;
+        }
+        
+
         public ContentCheckerViewModel GetAll()
         {
             var vw = Deserialize(Filename);
@@ -155,6 +169,10 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         private ContentCheckerViewModel Deserialize(string aFileName)
         {
             var lst = new ContentCheckerViewModel();
+            if (!File.Exists(aFileName))
+            {
+                return lst;
+            }
             try
             {
                 XmlSerializer deserializer = new XmlSerializer(typeof(ContentCheckerViewModel));
@@ -177,7 +195,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             }
 
         }
-        public string AddKey(string key)
+       /* public string AddKey(string key)
         {
             var contentCheckerVw = Deserialize(Filename);
             contentCheckerVw.Key = key;
@@ -186,7 +204,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
 
             return "User added";
 
-        }
+        }*/
         public string AddUrl(string path)
         {
             var vw = Deserialize(Filename);

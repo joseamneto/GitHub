@@ -31,23 +31,17 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         public ContentCheckerViewModel GetAll()
         {
             var ommc = new ContentCheckerCommand();
-            var oContentCheckerVw = ommc.GetAll();
-            if ((oContentCheckerVw.DataCheckerTable == null) || !(oContentCheckerVw.DataCheckerTable.Any()))
-            {
-                oContentCheckerVw.DataCheckerTable = ommc.PopulateContent();
-            }
-
-            return oContentCheckerVw;
+            return ommc.Fill();
         }
         
-        [HttpPost]
+       /* [HttpPost]
         public ActionResult AddKey(string key)
         {
             var ommc = new ContentCheckerCommand();
             ommc.AddKey(key);
             var oContentCheckerVw = GetAll();
             return View("ContentCheckerResultTable", oContentCheckerVw);
-        }
+        }*/
 
         [HttpPost]
         public ActionResult AddUrl(string url)

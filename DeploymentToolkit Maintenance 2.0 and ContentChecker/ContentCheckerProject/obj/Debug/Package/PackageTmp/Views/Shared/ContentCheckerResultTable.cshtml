@@ -3,23 +3,15 @@
 @inherits System.Web.Mvc.WebViewPage<Sitecore.DeploymentToolKit.ContentChecker.ContentCheckerViewModel>
 
 <div class="sc-listcontrol-body" id="contentCheckerTable">
-    <h2>Step 1  - Configure the JSS Key</h2>
+    <h3>Step 1  - Confirm JSS Key on config</h3>
     <b>JSS Configuration</b>
     <div class="main-Background">
-        <input type="textbox" id="txtkey" />
-        <button type="button" onclick="javascript: AddKey();" id="btnAddId" class="btn btn-default">Add Sitecore ID, for the JSS Key</button>
         <p>key : @Model.Key</p>
+        <p>Url Call : @Model.Url</p>
     </div>
-    
-    <h3>Optional Step  - Add aditional ulrs to be checked</h3>
-    <b>Type the url to be checked and click add</b>
-    <div class="main-Background">
-        <input type="textbox" id="urltxt" />
-        <button type="button" id="btnSave" onclick="javascript:AddUrl();" class="btn btn-default">Add new Url</button>
-    </div>
-    
-    <h3>Step 2  - Perform "Baseline Check" </h3>
-    <h3>Step 3  - Change the Items(deploy), Publish, and Perform "Second Check"</h3>
+   
+    <h3>Step 1  - Perform "Baseline Check" </h3>
+    <h3>Step 2  - Change the Items(deploy), Publish, and Perform "Second Check"</h3>
 
     <table class="sc-table table">
         <tbody data-bind="foreach: jobitems">

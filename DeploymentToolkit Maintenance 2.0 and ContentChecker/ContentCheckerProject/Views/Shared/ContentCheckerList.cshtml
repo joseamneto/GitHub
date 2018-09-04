@@ -124,10 +124,12 @@
 <div class="container theme-showcase" role="main">
     <div class="jumbotron">
         <h1>Content Checker</h1>
-        <p>With this content checker tool, you are able to take save the Content in a moment, and compare later after a change.This helps you to keep the quality of your deployment</p>
-        <p>This tool uses, Sitecore JSS, so the server to be checked must have this option enabled</p>
-        <p> Download and istall JSS Package <a href="https://dev.sitecore.net/Downloads/Sitecore_JavaScript_Services/90_Tech_Preview/Sitecore_JavaScript_Services_90_Update_1_Tech_Preview.aspx">Here</a></p>
-        <p>Add the configuration on the web.config as instruced on the Package installer</p>
+        <p>With this content checker tool, you are able to save the Content in a moment, and compare later after a change.This helps you to keep the quality of your deployment</p>
+        <p>This tool uses, Sitecore JSS must be enabled</p>
+        <p>1)Download and istall JSS Package <a href="https://dev.sitecore.net/Downloads/Sitecore_JavaScript_Services/90_Tech_Preview/Sitecore_JavaScript_Services_90_Update_1_Tech_Preview.aspx">Here</a></p>
+        <p>2)Add the configuration on the web.config as instructed on the Package installer</p>
+        <p>3)Open the File Z.DeploymentToolkit.config</p>
+        <p>4)Configure the fields : JssUrl, MainDir</p>
     </div>
     
      @Html.Partial("~/Views/Shared/ContentCheckerResultTable.cshtml", Model)
