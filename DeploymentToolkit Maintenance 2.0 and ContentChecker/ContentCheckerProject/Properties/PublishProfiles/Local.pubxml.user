@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/01/2018 23:05:33</publishTime>
     </File>
     <File Include="App_Config/Include/DeploymentToolKit/Z.DeploymentToolkit.config">
-      <publishTime>09/03/2018 00:39:37</publishTime>
+      <publishTime>09/05/2018 17:07:38</publishTime>
     </File>
     <File Include="App_Config/include/GetContentEditorWarningProcessor1.config">
       <publishTime>01/01/0001 00:00:00</publishTime>
