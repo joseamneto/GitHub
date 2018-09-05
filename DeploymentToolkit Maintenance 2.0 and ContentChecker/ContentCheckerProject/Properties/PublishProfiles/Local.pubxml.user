@@ -505,7 +505,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 13:39:28</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerList.cshtml">
-      <publishTime>09/04/2018 19:26:40</publishTime>
+      <publishTime>09/05/2018 17:06:41</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerNavigation.cshtml">
       <publishTime>02/09/2018 13:40:27</publishTime>
