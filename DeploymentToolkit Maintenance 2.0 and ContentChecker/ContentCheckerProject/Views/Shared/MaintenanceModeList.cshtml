@@ -40,7 +40,8 @@
 </head>
 
 <body>
-    @Html.Partial("~/Views/Shared/DeploymentToolKitNavigation.cshtml")
+    <div id="BlockUsers">
+        @Html.Partial("~/Views/Shared/DeploymentToolKitNavigation.cshtml")
 
     <div class="container theme-showcase" role="main">
         <div class="jumbotron">
@@ -48,36 +49,36 @@
             <p>When we are going to do a deployment, we need to warn users not to connect to the system during this process. With just one click it blocks all users who are not Sitecore Administrators and with another click, unlocks!</p>
         </div>
 
-        <div id="BlockUsers">
+        <div>
             <div>
                 <b>Current Active Sessions(non admin users)</b>
                 <div class="sc-listcontrol-body">
                     <table class="sc-table table">
                         <tbody data-bind="foreach: jobitems">
-                            <tr>
-                                <td>
-                                    <b>User</b>
-                                </td>
+                        <tr>
+                            <td>
+                                <b>User</b>
+                            </td>
 
-                                <td><b>Session ID</b> </td>
+                            <td><b>Session ID</b> </td>
 
-                            </tr>
+                        </tr>
 
-                            @{
-                                foreach (var user in Model.UserSessions)
-                                {
-                                    <tr>
+                        @{
+                            foreach (var user in Model.UserSessions)
+                            {
+                                <tr>
 
-                                        <td>
-                                            @user.UserName
-                                        </td>
+                                    <td>
+                                        @user.UserName
+                                    </td>
 
-                                        <td>
-                                            <span align="right">@user.SessionID</span>
-                                        </td>
-                                    </tr>
-                                }
+                                    <td>
+                                        <span align="right">@user.SessionID</span>
+                                    </td>
+                                </tr>
                             }
+                        }
                         </tbody>
                     </table>
                 </div>
@@ -94,38 +95,39 @@
                 <div class="sc-listcontrol-body">
                     <table class="sc-table table">
                         <tbody data-bind="foreach: jobitems">
-                            <tr>
-                                <td>
-                                    <b>User</b>
-                                </td>
+                        <tr>
+                            <td>
+                                <b>User</b>
+                            </td>
 
-                                <td><b>Locked</b> </td>
-                                <td><b>Email</b> </td>
-                            </tr>
+                            <td><b>Locked</b> </td>
+                            <td><b>Email</b> </td>
+                        </tr>
 
-                            @{
-                                foreach (var user in Model.Users)
-                                {
-                                    <tr>
-                                        <td>
-                                            @user.UserName
-                                        </td>
+                        @{
+                            foreach (var user in Model.Users)
+                            {
+                                <tr>
+                                    <td>
+                                        @user.UserName
+                                    </td>
 
-                                        <td>
-                                            <span align="right">@user.Locked</span>
-                                        </td>
-                                        <td>
-                                            <span align="right">@user.Email</span>
-                                        </td>
-                                    </tr>
-                                }
+                                    <td>
+                                        <span align="right">@user.Locked</span>
+                                    </td>
+                                    <td>
+                                        <span align="right">@user.Email</span>
+                                    </td>
+                                </tr>
                             }
+                        }
                         </tbody>
                     </table>
                 </div>
             </div>
             <p>@Model.Output</p>
         </div>
+    </div>
     </div>
 </body>
 </html>
