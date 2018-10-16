@@ -123,9 +123,11 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             var dataCheckerTable = new List<ContentCheckerModel>();
 
             var mainDirConfigParam = Settings.GetSetting("DeploymentToolKit.ContentChecker.MainDir");
+            var checkForLayout = Settings.GetSetting("DeploymentToolKit.ContentChecker.CheckForLayout");
+
             var oContent = Context.Database.GetItem(mainDirConfigParam);
 
-            var list = oContent.Axes.GetDescendants();
+            var list = oContent.Axes.GetDescendants().OrderBy(t=> t.Name);
 
             foreach (var homeItem in list)
             {
@@ -136,10 +138,18 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                     var oItem = new ContentCheckerModel();
                     oItem.Path = item.Paths.Path; //.Replace(homeItem.Paths.Path, "");
 
-                    if (DoesItemHasPresentationDetails(item))
+                    if (checkForLayout.ToLower() == "true")
+                    {
+                        if (DoesItemHasPresentationDetails(item))
+                        {
+                            dataCheckerTable.Add(oItem);
+                        }
+                    }
+                    else
                     {
                         dataCheckerTable.Add(oItem);
                     }
+
                 }
             }
 

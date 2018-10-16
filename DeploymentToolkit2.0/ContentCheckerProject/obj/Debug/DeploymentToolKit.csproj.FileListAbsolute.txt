@@ -17,3 +17,27 @@ F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenanc
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenance 2.0 and ContentChecker\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.dll
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenance 2.0 and ContentChecker\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.pdb
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenance 2.0 and ContentChecker\ContentCheckerProject\obj\Debug\DeploymentToolKit.csprojResolveAssemblyReference.cache
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\obj\Debug\DeploymentToolKit.csprojResolveAssemblyReference.cache
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.pdb
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Sitecore.DeploymentToolKit.dll.config
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Sitecore.DeploymentToolKit.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Sitecore.DeploymentToolKit.pdb
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\JsonDiffPatchDotNet.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Microsoft.Web.Infrastructure.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Newtonsoft.Json.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Sitecore.Kernel.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.Helpers.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.Mvc.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.Razor.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.Deployment.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.Razor.dll
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\JsonDiffPatchDotNet.pdb
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Newtonsoft.Json.xml
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.Helpers.xml
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.Mvc.xml
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.Razor.xml
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.xml
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.Deployment.xml
+F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.Razor.xml

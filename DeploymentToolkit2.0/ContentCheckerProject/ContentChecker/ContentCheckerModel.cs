@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using JsonDiffPatchDotNet;
+using Newtonsoft.Json.Linq;
 using static System.String;
 
 
 namespace Sitecore.DeploymentToolKit.ContentChecker
 {
     [Serializable]
-     public class ContentCheckerModel
+    public class ContentCheckerModel
     {
         public string Path { get; set; }
         public string BaselineContent { get; set; }
@@ -39,7 +41,12 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             if ((!IsNullOrEmpty(BaselineContent)) && (!IsNullOrEmpty(SecondCheck)))
             {
-                string val1 = BaselineContent;
+                var leftJson = BaselineContent;
+                var rightJson = SecondCheck;
+                var jdp = new JsonDiffPatch();
+                JToken diffResult = jdp.Diff(leftJson, rightJson);
+
+                /*string val1 = BaselineContent;
                 string val2 = SecondCheck;
 
                 MatchCollection words1 = Regex.Matches(val1, @"\b(\w+)\b");
@@ -58,8 +65,8 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 foreach (var lst in hs2.ToList())
                 {
                     diff += lst;
-                }
-                return diff;
+                }*/
+                return diffResult.ToString();
             }
 
             return Empty;
@@ -69,7 +76,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             if (SecondCheckDate.HasValue)
             {
-                return SecondCheckDate.Value.ToShortDateString() + " "+ SecondCheckDate.Value.ToShortTimeString();
+                return SecondCheckDate.Value.ToShortDateString() + " " + SecondCheckDate.Value.ToShortTimeString();
             }
             return "";
         }
