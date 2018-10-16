@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/01/2018 23:05:33</publishTime>
     </File>
     <File Include="App_Config/Include/DeploymentToolKit/Z.DeploymentToolkit.config">
-      <publishTime>09/05/2018 17:07:38</publishTime>
+      <publishTime>10/16/2018 16:59:14</publishTime>
     </File>
     <File Include="App_Config/include/GetContentEditorWarningProcessor1.config">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -33,6 +33,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/events.tac.local.pdb">
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
+    <File Include="bin/JsonDiffPatchDotNet.dll">
+      <publishTime>10/15/2018 23:23:12</publishTime>
+    </File>
+    <File Include="bin/JsonDiffPatchDotNet.pdb">
+      <publishTime>10/15/2018 23:17:42</publishTime>
+    </File>
     <File Include="bin/Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <publishTime>05/15/2017 22:00:32</publishTime>
     </File>
@@ -43,10 +49,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/13/2015 12:16:30</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
-      <publishTime>07/25/2012 17:48:56</publishTime>
+      <publishTime>07/25/2012 10:48:56</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/24/2018 17:44:14</publishTime>
+      <publishTime>10/15/2018 23:23:12</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/13/2012 11:19:34</publishTime>
@@ -58,13 +64,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 19:43:14</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.dll">
-      <publishTime>09/05/2018 16:58:55</publishTime>
+      <publishTime>10/16/2018 17:11:43</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.pdb">
-      <publishTime>09/05/2018 16:58:55</publishTime>
+      <publishTime>10/16/2018 17:11:43</publishTime>
     </File>
     <File Include="bin/Sitecore.Kernel.dll">
-      <publishTime>05/30/2018 07:03:38</publishTime>
+      <publishTime>05/30/2018 00:03:38</publishTime>
     </File>
     <File Include="bin/Sitecore.MaintenaceMode.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -91,7 +97,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/10/2018 22:38:56</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
-      <publishTime>08/26/2014 04:36:26</publishTime>
+      <publishTime>10/15/2018 22:50:30</publishTime>
     </File>
     <File Include="bin/System.Web.Http.dll">
       <publishTime>05/13/2017 16:50:24</publishTime>
@@ -100,19 +106,19 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>05/13/2017 16:50:24</publishTime>
     </File>
     <File Include="bin/System.Web.Mvc.dll">
-      <publishTime>08/26/2014 04:33:20</publishTime>
+      <publishTime>10/15/2018 22:50:30</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
-      <publishTime>08/26/2014 04:33:36</publishTime>
+      <publishTime>10/15/2018 22:50:30</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Deployment.dll">
-      <publishTime>08/26/2014 04:36:26</publishTime>
+      <publishTime>10/15/2018 22:50:30</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.dll">
-      <publishTime>08/26/2014 04:36:26</publishTime>
+      <publishTime>10/15/2018 22:50:30</publishTime>
     </File>
     <File Include="bin/System.Web.Webpages.Razor.dll">
-      <publishTime>08/26/2014 04:36:26</publishTime>
+      <publishTime>10/15/2018 22:50:30</publishTime>
     </File>
     <File Include="bin/TAC.Utils.dll">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -505,25 +511,25 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 13:39:28</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerList.cshtml">
-      <publishTime>09/05/2018 17:06:41</publishTime>
+      <publishTime>09/05/2018 10:06:41</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerNavigation.cshtml">
       <publishTime>02/09/2018 13:40:27</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerResultTable.cshtml">
-      <publishTime>09/05/2018 16:58:39</publishTime>
+      <publishTime>09/05/2018 09:58:39</publishTime>
     </File>
     <File Include="Views/Shared/DeploymentToolkit.cshtml">
-      <publishTime>06/12/2018 22:52:30</publishTime>
+      <publishTime>06/12/2018 15:52:30</publishTime>
     </File>
     <File Include="Views/Shared/DeploymentToolKitNavigation.cshtml">
-      <publishTime>02/10/2018 00:07:14</publishTime>
+      <publishTime>02/09/2018 17:07:14</publishTime>
     </File>
     <File Include="Views/Shared/ExperienceExplorerView.cshtml">
       <publishTime>05/11/2017 20:53:16</publishTime>
     </File>
     <File Include="Views/Shared/MaintenanceModeList.cshtml">
-      <publishTime>09/05/2018 16:58:03</publishTime>
+      <publishTime>09/05/2018 09:58:03</publishTime>
     </File>
     <File Include="Views/Shared/SitecoreJobsList.cshtml">
       <publishTime>11/10/2017 18:05:51</publishTime>
@@ -616,7 +622,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/02/2018 22:21:19</publishTime>
+      <publishTime>10/16/2018 17:12:15</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -17,7 +17,6 @@ F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenanc
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenance 2.0 and ContentChecker\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.dll
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenance 2.0 and ContentChecker\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.pdb
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit Maintenance 2.0 and ContentChecker\ContentCheckerProject\obj\Debug\DeploymentToolKit.csprojResolveAssemblyReference.cache
-F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\obj\Debug\DeploymentToolKit.csprojResolveAssemblyReference.cache
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.dll
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\obj\Debug\Sitecore.DeploymentToolKit.pdb
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\Sitecore.DeploymentToolKit.dll.config

@@ -118,6 +118,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             var vw = Deserialize(Filename);
             return vw;
         }
+
         public List<ContentCheckerModel> PopulateContent()
         {
             var dataCheckerTable = new List<ContentCheckerModel>();
@@ -127,29 +128,23 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
 
             var oContent = Context.Database.GetItem(mainDirConfigParam);
 
-            var list = oContent.Axes.GetDescendants().OrderBy(t=> t.Name);
+            var list = oContent.Axes.GetDescendants().OrderBy(t => t.Name).ToList();
 
-            foreach (var homeItem in list)
+            foreach (var item in list)
             {
-                var fullList = homeItem.Axes.GetDescendants();
+                var oItem = new ContentCheckerModel();
+                oItem.Path = item.Paths.Path; //.Replace(homeItem.Paths.Path, "");
 
-                foreach (var item in fullList)
+                if (checkForLayout.ToLower() == "true")
                 {
-                    var oItem = new ContentCheckerModel();
-                    oItem.Path = item.Paths.Path; //.Replace(homeItem.Paths.Path, "");
-
-                    if (checkForLayout.ToLower() == "true")
-                    {
-                        if (DoesItemHasPresentationDetails(item))
-                        {
-                            dataCheckerTable.Add(oItem);
-                        }
-                    }
-                    else
+                    if (DoesItemHasPresentationDetails(item))
                     {
                         dataCheckerTable.Add(oItem);
                     }
-
+                }
+                else
+                {
+                    dataCheckerTable.Add(oItem);
                 }
             }
 
