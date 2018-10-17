@@ -45,27 +45,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 var rightJson = SecondCheck;
                 var jdp = new JsonDiffPatch();
                 JToken diffResult = jdp.Diff(leftJson, rightJson);
-
-                /*string val1 = BaselineContent;
-                string val2 = SecondCheck;
-
-                MatchCollection words1 = Regex.Matches(val1, @"\b(\w+)\b");
-                MatchCollection words2 = Regex.Matches(val2, @"\b(\w+)\b");
-
-                var hs1 = new HashSet<string>(words1.Cast<Match>().Select(m => m.Value));
-                var hs2 = new HashSet<string>(words2.Cast<Match>().Select(m => m.Value));
-
-                // Optionaly you can use a custom comparer for the words.
-                // var hs2 = new HashSet<string>(words2.Cast<Match>().Select(m => m.Value), new MyComparer());
-
-                // h2 contains after this operation only 'very' and 'Joe'
-                hs2.ExceptWith(hs1);
-
-                var diff = Empty;
-                foreach (var lst in hs2.ToList())
-                {
-                    diff += lst;
-                }*/
+                
                 return diffResult.ToString();
             }
 

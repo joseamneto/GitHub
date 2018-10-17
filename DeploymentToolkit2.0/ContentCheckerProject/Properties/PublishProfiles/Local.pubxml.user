@@ -13,7 +13,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/01/2018 23:05:33</publishTime>
     </File>
     <File Include="App_Config/Include/DeploymentToolKit/Z.DeploymentToolkit.config">
-      <publishTime>10/16/2018 16:59:14</publishTime>
+      <publishTime>10/17/2018 10:38:19</publishTime>
     </File>
     <File Include="App_Config/include/GetContentEditorWarningProcessor1.config">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -64,10 +64,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 19:43:14</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.dll">
-      <publishTime>10/16/2018 17:11:43</publishTime>
+      <publishTime>10/17/2018 11:04:47</publishTime>
     </File>
     <File Include="bin/Sitecore.DeploymentToolKit.pdb">
-      <publishTime>10/16/2018 17:11:43</publishTime>
+      <publishTime>10/17/2018 11:04:47</publishTime>
     </File>
     <File Include="bin/Sitecore.Kernel.dll">
       <publishTime>05/30/2018 00:03:38</publishTime>
@@ -511,7 +511,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/09/2018 13:39:28</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerList.cshtml">
-      <publishTime>09/05/2018 10:06:41</publishTime>
+      <publishTime>10/16/2018 17:36:38</publishTime>
     </File>
     <File Include="Views/Shared/ContentCheckerNavigation.cshtml">
       <publishTime>02/09/2018 13:40:27</publishTime>
@@ -622,7 +622,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/01/0001 00:00:00</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/16/2018 17:12:15</publishTime>
+      <publishTime>10/17/2018 11:05:12</publishTime>
     </File>
   </ItemGroup>
 </Project>

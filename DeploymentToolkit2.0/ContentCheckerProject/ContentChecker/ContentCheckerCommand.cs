@@ -7,37 +7,49 @@ using System.Web;
 using System.Xml.Serialization;
 using Sitecore.Configuration;
 using Sitecore.Data.Items;
-using Sitecore.Pipelines.GetPlaceholderRenderings;
-using Sitecore.Shell.Framework.Commands;
-using Sitecore.Web.UI.Sheer;
-
 
 namespace Sitecore.DeploymentToolKit.ContentChecker
 {
-    public class ContentCheckerCommand : Command
+    public class ContentCheckerCommand
     {
         public ContentCheckerCommand()
         {
-            SetFilename();
+            try
+            {
+                SetFilename();
+            }
+            catch (Exception ex)
+            {
+                Diagnostics.Log.Error("Content Checker", ex, this);
+            }
         }
+
         public string Filename { set; get; }
-        public string Mappath  { set; get; }
-        public  void SetFilename()
+    
+        public void SetFilename()
         {
-             Mappath = HttpContext.Current.Server.MapPath("~");
-          
-            Filename = Mappath + Settings.GetSetting("DeploymentToolKit.ContentChecker.xml"); 
+            try
+            {
+                var path = HttpContext.Current.Server.MapPath("~");
+                var directory = Settings.GetSetting("DeploymentToolKit.ContentChecker.Directory");
+
+                var fulldirectory = path + directory;
+                Filename = fulldirectory + Settings.GetSetting("DeploymentToolKit.ContentChecker.SnapshotFilename");
+                CreateIfMissing(fulldirectory);
+            }
+            catch (Exception ex)
+            {
+                Diagnostics.Log.Error("Content Checker", ex, this);
+            }
+
         }
-        public override void Execute(CommandContext context)
+        public void CreateIfMissing(string path)
         {
-            if (context == null)
-                return;
-            SheerResponse.ShowModalDialog(Settings.GetSetting("DeploymentToolKit.ContentChecker.Checker")); 
+            var folderExists = Directory.Exists(path);
+            if (!folderExists)
+                Directory.CreateDirectory(path);
         }
-        public void Refresh(params object[] parameters)
-        {
-            // Do Stuff
-        }
+
         public string PerformGet(string sitecoreItem)
         {
             try
@@ -47,7 +59,6 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 var key = Settings.GetSetting("DeploymentToolKit.ContentChecker.StandardJssKey");
                 var jssKey = "&sc_apikey=" + key;
                 
-                //var mainDir = Settings.GetSetting("DeploymentToolKit.ContentChecker.MainDir");
                 var requestUrl =  jssUrl + sitecoreItem + jssKey;
 
                 var request = (HttpWebRequest)WebRequest.Create(requestUrl);
@@ -60,45 +71,63 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             }
             catch (Exception ex)
             {
-                return "error";
+                Diagnostics.Log.Error("Content Checker", ex, this);
+
+                return $"error{ex.Message}";
             }
             
         }
         public void SecondCheck()
         {
-            var odt = DateTime.Now;
-            var vw = Deserialize(Filename);
-            if (vw.DataCheckerTable == null)
+            try
             {
-                vw.DataCheckerTable = PopulateContent();
-            }
+                var odt = DateTime.Now;
+                var vw = Deserialize(Filename);
+                if (vw.DataCheckerTable == null)
+                {
+                    vw.DataCheckerTable = PopulateContent();
+                }
 
-            foreach (var item in vw.DataCheckerTable)
+                foreach (var item in vw.DataCheckerTable)
+                {
+                    var response = PerformGet(item.Path);
+                    item.SecondCheck = response;
+                    item.SecondCheckDate = odt;
+                }
+
+                Serialization(vw, Filename);
+            }
+            catch (Exception ex)
             {
-                var respose = PerformGet(item.Path);
-                item.SecondCheck = respose;
-                item.SecondCheckDate = odt;
+                Diagnostics.Log.Error("Content Checker", ex, this);
             }
-
-            Serialization(vw, Filename);
+            
         }
         public void BaselineCheck()
         {
-            var odt = DateTime.Now;
-            var vw = Deserialize(Filename);
-            if (vw.DataCheckerTable ==null)
+            try
             {
-                vw.DataCheckerTable = PopulateContent();
-            }
+                var odt = DateTime.Now;
+                var vw = Deserialize(Filename);
+                if (vw.DataCheckerTable == null)
+                {
+                    vw.DataCheckerTable = PopulateContent();
+                }
 
-            foreach (var item in vw.DataCheckerTable)
+                foreach (var item in vw.DataCheckerTable)
+                {
+                    var response = PerformGet(item.Path);
+                    item.BaselineContent = response;
+                    item.BaselineContentDate = odt;
+                }
+
+                Serialization(vw, Filename);
+            }
+            catch (Exception ex)
             {
-                var respose = PerformGet(item.Path);
-                item.BaselineContent = respose;
-                item.BaselineContentDate = odt;
+                Diagnostics.Log.Error("Content Checker", ex, this);
             }
-
-            Serialization(vw, Filename);
+            
         }
 
         public ContentCheckerViewModel Fill()
@@ -123,7 +152,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             var dataCheckerTable = new List<ContentCheckerModel>();
 
-            var mainDirConfigParam = Settings.GetSetting("DeploymentToolKit.ContentChecker.MainDir");
+            var mainDirConfigParam = Settings.GetSetting("DeploymentToolKit.ContentChecker.WebsiteRoot");
             var checkForLayout = Settings.GetSetting("DeploymentToolKit.ContentChecker.CheckForLayout");
 
             var oContent = Context.Database.GetItem(mainDirConfigParam);
@@ -133,7 +162,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             foreach (var item in list)
             {
                 var oItem = new ContentCheckerModel();
-                oItem.Path = item.Paths.Path; //.Replace(homeItem.Paths.Path, "");
+                oItem.Path = item.Paths.Path;
 
                 if (checkForLayout.ToLower() == "true")
                 {
@@ -171,7 +200,6 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 serializer.Serialize(stream, aStations);
                 stream.Close();
             }
-
         }
         private ContentCheckerViewModel Deserialize(string aFileName)
         {
@@ -196,22 +224,13 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             }
             catch (Exception ex)
             {
-                Diagnostics.Log.Error("MaintenanceModeCommand", ex, this);
+                Diagnostics.Log.Error("Contet Checker", ex, this);
                 return lst;
 
             }
 
         }
-       /* public string AddKey(string key)
-        {
-            var contentCheckerVw = Deserialize(Filename);
-            contentCheckerVw.Key = key;
-
-            Serialization(contentCheckerVw, Filename);
-
-            return "User added";
-
-        }*/
+      
         public string AddUrl(string path)
         {
             var vw = Deserialize(Filename);
