@@ -54,12 +54,15 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         {
             try
             {
-                var jssUrl = Settings.GetSetting("DeploymentToolKit.ContentChecker.JssUrl");
+                var jssLayoutServiceUrl = Settings.GetSetting("DeploymentToolKit.ContentChecker.JssLayoutServiceUrl");
 
                 var key = Settings.GetSetting("DeploymentToolKit.ContentChecker.StandardJssKey");
-                var jssKey = "&sc_apikey=" + key;
-                
-                var requestUrl =  jssUrl + sitecoreItem + jssKey;
+                var scApikey = "&sc_apikey=" + key;
+
+                var trackingConfig = Settings.GetSetting("DeploymentToolKit.ContentChecker.Tracking");
+                var trackingParameter = "&tracking=" + trackingConfig;
+
+                var requestUrl =  jssLayoutServiceUrl + sitecoreItem + scApikey + trackingParameter;
 
                 var request = (HttpWebRequest)WebRequest.Create(requestUrl);
 

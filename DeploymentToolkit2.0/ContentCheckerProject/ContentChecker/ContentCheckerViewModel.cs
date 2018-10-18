@@ -11,8 +11,8 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
         [XmlElement("Key")]
         public string Key => Settings.GetSetting("DeploymentToolKit.ContentChecker.StandardJssKey");
 
-        [XmlElement("Key")]
-        public string Url => Settings.GetSetting("DeploymentToolKit.ContentChecker.JssUrl");
+        [XmlElement("JssLayoutServiceUrl")]
+        public string Url => Settings.GetSetting("DeploymentToolKit.ContentChecker.JssLayoutServiceUrl");
 
         [XmlElement("DataCheckerTable")]
         public List<ContentCheckerModel> DataCheckerTable { set; get; }
