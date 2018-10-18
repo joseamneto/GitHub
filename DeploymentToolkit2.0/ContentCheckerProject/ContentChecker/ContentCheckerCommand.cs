@@ -156,7 +156,6 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
             var dataCheckerTable = new List<ContentCheckerModel>();
 
             var mainDirConfigParam = Settings.GetSetting("DeploymentToolKit.ContentChecker.WebsiteRoot");
-            var checkForLayout = Settings.GetSetting("DeploymentToolKit.ContentChecker.CheckForLayout");
 
             var oContent = Context.Database.GetItem(mainDirConfigParam);
 
@@ -167,14 +166,7 @@ namespace Sitecore.DeploymentToolKit.ContentChecker
                 var oItem = new ContentCheckerModel();
                 oItem.Path = item.Paths.Path;
 
-                if (checkForLayout.ToLower() == "true")
-                {
-                    if (DoesItemHasPresentationDetails(item))
-                    {
-                        dataCheckerTable.Add(oItem);
-                    }
-                }
-                else
+                if (DoesItemHasPresentationDetails(item))
                 {
                     dataCheckerTable.Add(oItem);
                 }

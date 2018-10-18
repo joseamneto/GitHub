@@ -40,4 +40,3 @@ F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\Content
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.xml
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.Deployment.xml
 F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\bin\System.Web.WebPages.Razor.xml
-F:\BACKUP\Google Drive\SITECORE\Meus Modulos\Github\DeploymentToolkit2.0\ContentCheckerProject\obj\Debug\DeploymentToolKit.csprojResolveAssemblyReference.cache
